@@ -1,5 +1,6 @@
 <template>
   <section class="index">
+    <Navigation></Navigation>
     <card 
         v-for="(post, i) in posts" 
         :key="i"
@@ -12,6 +13,7 @@
 
 <script>
 import Card from "~/components/card.vue";
+import Navigation from "~/components/Navigation.vue";
 import {createClient} from "~/plugins/contentful.js"
 
 const client = createClient()
