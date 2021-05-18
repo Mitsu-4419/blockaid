@@ -37,11 +37,11 @@
         <div class="hidden sm:block sm:ml-6">
           <div class="flex space-x-4">
             <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-            <a href="#" class="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium" aria-current="page">HOME</a>
-            <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">PROFILE</a>
-            <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">SKILL＆WORKS</a>
-            <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">BlOG</a>
-            <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">CONTACT</a>
+            <nuxt-link to='/' :class="[this.$route.path=='/'?activeClass:inactiveClass]" aria-current="page">HOME</nuxt-link>
+            <nuxt-link to='/profile' :class="[this.$route.path=='/profile'?activeClass:inactiveClass]">PROFILE</nuxt-link>
+            <nuxt-link to='/works' :class="[this.$route.path=='/works'?activeClass:inactiveClass]">WORKS</nuxt-link>
+            <nuxt-link to='/blog' :class="[this.$route.path=='/blog'?activeClass:inactiveClass]">BlOG</nuxt-link>
+            <nuxt-link to='/contact' :class="[this.$route.path=='/contact'?activeClass:inactiveClass]">CONTACT</nuxt-link>
           </div>
         </div>
       </div>
@@ -53,7 +53,7 @@
   <div class="sm:hidden" id="mobile-menu">
     <div class="px-2 pt-2 pb-3 space-y-1">
       <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-      <a href="#"　class="text-grey-500 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium" aria-current="page">Dashboard</a>
+      <a href="#" class="text-grey-500 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium" aria-current="page">Dashboard</a>
 
       <a href="#" class="text-grey-500 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Team</a>
 
@@ -66,4 +66,12 @@
 </template>
 
 <script>
+export default {
+  data(){
+    return{
+      activeClass:'bg-gray-900 text-white block px-3 py-2 rounded-md text-base font-medium',
+      inactiveClass:'text-grey-500 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium'
+    }
+  }
+}
 </script>

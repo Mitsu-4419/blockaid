@@ -1,8 +1,13 @@
 <template>
   <div>
+    <Navigation ></Navigation>
     <Nuxt />
   </div>
 </template>
+
+<script>
+</script>
+
 
 <style>
 html {
