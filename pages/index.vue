@@ -39,7 +39,7 @@
 </template>
 
 <script>
-import Card from "~/components/Card.vue";
+// import Card from "~/components/Card.vue";
 import {createClient} from "~/plugins/contentful.js"
 import RadarChart from '../js/RadarChart.js'
 
@@ -47,7 +47,7 @@ const client = createClient()
 export default {
   transition:'slide-left',
   components:{
-    Card,
+    // Card,
     RadarChart
   },
   data(){
