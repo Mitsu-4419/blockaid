@@ -1,13 +1,13 @@
 <template>
   <div>
   <section class="topPage-profile-bg">
-    <card 
+    <!-- <card 
         v-for="(post, i) in posts" 
         :key="i"
         :title="post.fields.title"
         :id="post.sys.id"
         :date="post.sys.updatedAt" 
-    />
+    /> -->
   </section>
   <section class="topPage-skill-charts m-2">
     <div class="topPage-skill-title m-3">
@@ -171,6 +171,8 @@ export default {
     return client
     .getEntries(env.CTF_BLOG_POST_TYPE_ID)
     .then(entries =>{
+      console.log("コンテントフルとつながったよ")
+      console.log(entries.items)
       return {
         posts:entries.items
       }
