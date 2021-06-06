@@ -41,7 +41,7 @@
             <nuxt-link to='/' :class="[this.$route.path=='/'?activeClass:inactiveClass]" aria-current="page">HOME</nuxt-link>
             <nuxt-link to='/profile' :class="[this.$route.path=='/profile'?activeClass:inactiveClass]">PROFILE</nuxt-link>
             <nuxt-link to='/works' :class="[this.$route.path=='/works'?activeClass:inactiveClass]">WORKS</nuxt-link>
-            <nuxt-link to='/blog' :class="[this.$route.path=='/blog'?activeClass:inactiveClass]">BlOG</nuxt-link>
+            <nuxt-link to='/blog' :class="[this.$route.path=='/blog/blog'?activeClass:inactiveClass]">BlOG</nuxt-link>
             <nuxt-link to='/contact' :class="[this.$route.path=='/contact'?activeClass:inactiveClass]">CONTACT</nuxt-link>
           </div>
         </div>

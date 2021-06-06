@@ -1,13 +1,11 @@
 <template>
-    <nuxt-link :to="{name:'blog-slug', params:{
-        sys:id
-    }}" class="wrapper">
+    <nuxt-link :to="`/blog/${id}`" class="wrapper">
     <div class="max-w-xs rounded overflow-hidden shadow-lg mx-2 my-2">
-      <img class="w-full" src="../appIcon_android.png" alt="Sunset in the mountains">
+      <img class="w-full" :src="mainThumbnail" alt="Sunset in the mountains">
       <div class="px-6 py-4">
         <div class="font-bold text-xl mb-2">{{title}}</div>
         <p class="text-gray-700 text-base">
-          {{content}}
+          <div v-html="toHtmlString(content)"></div>
         </p>
       </div>
       <div class="px-6 pt-4 pb-2">
@@ -21,6 +19,7 @@
 </template>
 <script>
 import Tag from '~/components/Tag.vue'
+import { documentToHtmlString } from '@contentful/rich-text-html-renderer'
 export default{
     components:{
         Tag
@@ -35,9 +34,17 @@ export default{
             default:''
         },
         content:{
-            type:String,
-            default:''
+            JSON
+        },
+        mainThumbnail:{
+          type:String,
+          default:''
         }
+    },
+    methods:{
+      toHtmlString(obj){
+        return documentToHtmlString(obj)
+      }
     }
 }
 </script>
