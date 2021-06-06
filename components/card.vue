@@ -2,15 +2,29 @@
     <nuxt-link :to="{name:'blog-slug', params:{
         sys:id
     }}" class="wrapper">
-        <article class="card">
-            <h1 class="card_title">{{title}}</h1>
-            <p class="card_text">{{id}}</p>
-            <p class='card_date'>{{date}}</p>
-        </article>
+    <div class="max-w-xs rounded overflow-hidden shadow-lg mx-2 my-2">
+      <img class="w-full" src="../appIcon_android.png" alt="Sunset in the mountains">
+      <div class="px-6 py-4">
+        <div class="font-bold text-xl mb-2">{{title}}</div>
+        <p class="text-gray-700 text-base">
+          {{content}}
+        </p>
+      </div>
+      <div class="px-6 pt-4 pb-2">
+        <Tag tag="hoge"/>
+        <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#photography</span>
+        <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#travel</span>
+        <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#winter</span>
+      </div>
+    </div>
     </nuxt-link>
 </template>
 <script>
+import Tag from '~/components/Tag.vue'
 export default{
+    components:{
+        Tag
+    },
     props:{
         title:{
             type:String,
@@ -20,7 +34,7 @@ export default{
             type:String,
             default:''
         },
-        date:{
+        content:{
             type:String,
             default:''
         }

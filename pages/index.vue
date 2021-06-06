@@ -130,13 +130,13 @@ export default {
   methods: {
     RadarChart () {
         this.datacollection = {
-            labels: ["Flutter", "Vue.js", "Contentful","GraphQL", "WASM", "Typescript","React.js"],
+            labels: ["Vue.js","Contentful","Flutter","GraphQL", "WASM", "Typescript","React.js"],
             datasets: [
                 {
                     backgroundColor: 'red',
                     backgroundColor: this.fontColor.blue,
                     borderWidth: 1,
-                    data: [4,5,5,3,2,3,3],
+                    data: [5,4,4,3,2,3,3],
                     
                 }
             ],
@@ -166,7 +166,7 @@ export default {
             ],
         }
     },
- },
+  },
   asyncData({env, params}){
     return client
     .getEntries(env.CTF_BLOG_POST_TYPE_ID)
