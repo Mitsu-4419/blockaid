@@ -1,7 +1,8 @@
 <template>
-    <section class='blog h-screen bg-gray-200 pt-100px flex justify-center grid grid-cols-7'>
-        <section class='col-span-5 bg-red-200 p-10 flex flex-wrap'>
+    <section class='blog bg-gray-200 pt-100px flex justify-center grid grid-cols-10'>
+        <section class='col-span-7 bg-red-200 p-5 flex justify-center'>
             <card 
+                class='blog-card'
                 v-for="(post, i) in posts" 
                 :key="i"
                 :title="post.fields.title"
@@ -11,7 +12,7 @@
                 :mainThumbnail='post.fields.mainThumbnail.fields.file.url' 
             />
         </section>
-        <section class='col-span-2 bg-green-200 p-10'>
+        <section class='col-span-3 bg-green-200 p-10'>
         </section>
     </section>
 </template>
@@ -43,6 +44,9 @@ export default {
 
 <style scoped>
 .blog{
-    padding:80px;
+    padding:60px 80px;
+}
+.blog-card{
+    width:45%
 }
 </style>

@@ -1,5 +1,18 @@
 <template>
-  <h1>hogehoge</h1>
+  <section class='blog bg-gray-200 pt-100px flex justify-center grid grid-cols-10'>
+        <section class='col-span-7 bg-red-200 p-5' v-if="content">
+            <div>{{content.fields.title}}</div>
+            <div>{{content.fields.postDate}}</div>
+            <div>
+              <img :src="content.fields.mainThumbnail.fields.file.url" alt="">
+            </div>
+            <p class="text-gray-700 text-base">
+              <div v-html="toHtmlString(content.fields.content)"></div>
+            </p>
+        </section>
+        <section class='col-span-3 bg-green-200 p-10'>
+        </section>
+    </section>
 </template>
 
 <script>
@@ -8,11 +21,11 @@ import { createClient } from '~/plugins/contentful.js'
 
 const client = createClient()
 export default {
-  // data(){
-  //   return{
-  //     query:''
-  //   }
-  // },
+  data(){
+    return{
+      content:''
+    }
+  },
   methods: {
     toHtmlString(obj) {
       return documentToHtmlString(obj)
@@ -27,6 +40,7 @@ export default {
     const id = this.$route.params.blog
     const place = await client.getEntry(id)
     console.log(place)
+    this.content=place
   },
   
 }
@@ -57,3 +71,9 @@ export default {
 //     }
 // }
 </script>
+
+<style scoped>
+.blog{
+  padding:60px 80px;
+}
+</style>

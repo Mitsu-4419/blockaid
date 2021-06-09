@@ -1,9 +1,7 @@
 <template>
   <div>
     <Navigation ></Navigation>
-    
     <Nuxt />
-   
     <Footer />
   </div>
 </template>
@@ -30,6 +28,10 @@ html {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
+  
+}
+body{
+ min-height: 100vh;
 }
 
 *,
