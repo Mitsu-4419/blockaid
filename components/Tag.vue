@@ -1,5 +1,5 @@
 <template>
-    <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#{{tag}}</span>
+    <span class="badge hover:bg-gray-300 hover:text-gray-400">{{tag}}</span>
 </template>
 
 <script>
@@ -14,5 +14,7 @@ export default {
 </script>
 
 <style>
-
+.badge {
+  @apply bg-indigo-800 text-gray-100 text-xs uppercase font-bold rounded-full p-2 absolute top-0 left-2 mt-2 ;
+}
 </style>

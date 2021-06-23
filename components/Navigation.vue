@@ -30,8 +30,8 @@
         </button>
       </div>
       <div class="flex-shrink-0 flex items-center">
-          <img class="block lg:hidden h-8 w-auto" src="../static/icon-48x48.png">
-          <img class="hidden lg:block h-8 w-auto" src="../static/icon-48x48.png" >
+          <img class="block lg:hidden h-8 w-auto" src="../static/icon-48x48-2.png">
+          <img class="hidden lg:block h-8 w-auto" src="../static/icon-48x48-2.png" >
           <section class='text-2xl font-medium font-serif ml-3'>Ko-rin Yamada</section>
         </div>
       <div class="flex-1 flex items-center justify-center sm:items-stretch sm:justify-end">

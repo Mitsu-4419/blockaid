@@ -1,12 +1,18 @@
 <template>
-  <div>
+  <div class='text-gray-700'>
     <Navigation ></Navigation>
-    <Nuxt />
+    <div class="min-h-screen">
+      <Nuxt />
+    </div>
+    
     <Footer />
   </div>
 </template>
 
 <script>
+export default {
+  
+}
 </script>
 
 

@@ -11,7 +11,7 @@
                     </div>
                 </div>
                 <div class='history-wrapper'>
-                    <p class='text-xl'><略歴></p>
+                    <p class='text-xl'>略歴</p>
                     <p>1983年　神戸市生まれ</p>
                     <p>2001年　私立灘高校卒業</p>
                     <p>2009年　大阪大学医学部医学科卒業</p>

@@ -1,5 +1,5 @@
 <template>
-  <section class='blog bg-gray-200 pt-100px flex justify-center grid grid-cols-10'>
+  <section class='blog bg-gray-200 pt-100px flex justify-center grid grid-cols-10 '>
         <section class='col-span-7 bg-red-200 p-5' v-if="content">
             <div>{{content.fields.title}}</div>
             <div>{{content.fields.postDate}}</div>
