@@ -50,7 +50,13 @@ export default {
   modules: [
     // '@chakra-ui/nuxt',
     // '@nuxtjs/emotion'
+    '@nuxtjs/markdownit'
   ],
+  markdownit: {
+    html:true,
+    injected: true,   // 「$md」でどこからでも使えるようにする
+    breaks: true     // 改行を<br/>に変換する
+  },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {

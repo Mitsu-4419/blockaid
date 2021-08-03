@@ -4,8 +4,8 @@
     <div class="min-h-screen">
       <Nuxt />
     </div>
-    
-    <Footer />
+<!--     
+    <Footer /> -->
   </div>
 </template>
 

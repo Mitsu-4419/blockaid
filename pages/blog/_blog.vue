@@ -6,9 +6,9 @@
             <div>
               <img :src="content.fields.mainThumbnail.fields.file.url" alt="">
             </div>
-            <p class="text-gray-700 text-base">
-              <div v-html="toHtmlString(content.fields.content)"></div>
-            </p>
+           
+              <div v-html="$md.render(content.fields.content)" class="leading-10"></div>
+            <!-- </p> -->
         </section>
         <section class='col-span-3 bg-green-200 p-10'>
         </section>

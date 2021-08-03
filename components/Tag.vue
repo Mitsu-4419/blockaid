@@ -15,6 +15,6 @@ export default {
 
 <style>
 .badge {
-  @apply bg-indigo-800 text-gray-100 text-xs uppercase font-bold rounded-full p-2 absolute top-0 left-2 mt-2 ;
+  @apply bg-indigo-900 text-gray-100 text-xs uppercase font-bold rounded-full p-2 absolute top-0 left-2 mt-2 ;
 }
 </style>

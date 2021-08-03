@@ -10,7 +10,7 @@
           </div>
           <div class="font-bold text-xl mb-2 mt-2">{{title}}</div>
         </div>
-          <Tag tag="hoge"/>
+        <Tag :tag="tag"/>
     </nuxt-link>
 </template>
 <script>
@@ -42,6 +42,10 @@ export default{
           default:''
         },
         postDate:{
+          type:String,
+          default:''
+        },
+        tag:{
           type:String,
           default:''
         }
